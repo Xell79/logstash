@@ -1,0 +1,4 @@
+UNIFI_FW [0-9]+\.[0-9]+\.[0-9]+\.[0-9]+
+UNIFI_DEV_TYPE \s?(\("%{WORD:unifi_type},%{BASE16FLOAT:unifi_ap_mac},v%{UNIFI_FW:unifi_firmware}"\))?
+UNIFI_EVENT_TYPE (IEEE 802\.11|WPA|WEP)
+CISCOTIMESTAMP %{MONTH} +%{MONTHDAY}(?: %{YEAR})? %{TIME}(?: %{WORD})?
